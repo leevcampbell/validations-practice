@@ -19,19 +19,19 @@ db.init_app(app)
 # CARD ROUTES #
 
 @app.get('/cards')
-def all_games():
+def all_cards():
     cards = PokemonCard.query.all()
     cards_to_dict = [card.to_dict() for card in cards]
     return cards_to_dict, 200
 
 
 @app.post('/cards')
-def create_game():
+def create_card():
     return "You'll need to fix the POST to accept and process your data!"
 
 
 @app.get('/cards/<int:id>')
-def game_by_id(id):
+def card_by_id(id):
     try:
         card = PokemonCard.query.where(PokemonCard.id == id).first()
         return card.to_dict(), 200
@@ -40,7 +40,7 @@ def game_by_id(id):
 
 
 @app.delete('/cards/<int:id>')
-def delete_game(id):
+def delete_card(id):
     card = PokemonCard.query.where(PokemonCard.id == id).first()
     if card:
         db.session.delete(card)
