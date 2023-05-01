@@ -36,7 +36,7 @@ Once the model has been built, add in these validations:
 - `hit_points` must be divisible by 10 (so 20,30,40,etc.)
 
 - `type` must be one of the following: `Grass`, `Fire`, `Water` (you can add
-  more Pokemon types but it's unnecessary)
+  more Pokemon types if you know them)
 
 - `is_holographic` must be `True` if the Pokemon's name is `Pikachu`
 
