@@ -29,7 +29,7 @@ Once the model has been built, add in these validations:
 
 - `type` cannot be an empty string
 
-## BONUS Validations
+## HARDMODE Validations
 
 - `name` must start with a capital letter and cannot be an empty string
 
