@@ -18,5 +18,5 @@ if __name__ == '__main__':
 
     db.init_app(app)
 
-    with app.app_context():
-        ipdb.set_trace()
+    # with app.app_context():
+    #     ipdb.set_trace()

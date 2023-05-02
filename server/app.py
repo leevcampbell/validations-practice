@@ -27,7 +27,12 @@ def all_cards():
 
 @app.post('/cards')
 def create_card():
-    return "You'll need to fix the POST to accept and process your data!"
+    data = request.json
+    new_card = PokemonCard(name=data['name'], price=data['price'], hp=data['hp'], card_type=data['card_type'], is_holographic=data['is_holographic'])
+    db.session.add(new_card)
+    db.session.commit()
+    return new_card.to_dict(), 201
+
 
 
 @app.get('/cards/<int:id>')
